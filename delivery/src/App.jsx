@@ -1,11 +1,12 @@
+import './App.css'
+import DeliveryList from './components/DeliveryList'
 
-
-function App() {
-
-  return (
-    <></>
-  )
-  
+const App = () => {
+  return ( 
+    <>
+    <DeliveryList />
+    </>
+   );
 }
-
-export default App
+ 
+export default App;
