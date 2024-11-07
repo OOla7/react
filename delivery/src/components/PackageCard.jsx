@@ -1,4 +1,5 @@
-    	const PackageCard = () => {
+    	import DeliveryList from "./DeliveryList";
+        const PackageCard = () => {
             return ( 
                 <section>
                     <h2>package From Rotterdam</h2>

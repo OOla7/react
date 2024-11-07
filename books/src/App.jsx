@@ -1,20 +1,29 @@
-import Book from "./componants/Book"
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Navigation from './pages/Navigation';
+import NoPage from './pages/NoPage';
+import './App.css';
 
-
-function App() {
-  
-
+const App = () => {
   return (
-    <>
-      <Book image="afbeelding 1" title="intresting facts" 
-      author="Jordan Moore" />
-       <Book image="afbeelding 2" title="Atomic habits" 
-      author="James Clear" />
-       <Book image="afbeelding 3" title="Fairy tale" 
-      author="Stephan King" />
+    <Router>
+      <Header />
+      <Navigation />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </Layout>
+    </Router>
+  );
+};
 
-    </>
-  )
-}
-
-export default App
+export default App;
